@@ -3,7 +3,7 @@
 
 <% @posts.each do |post| %>
 <h2><%= link_to post.title, post %></h2>
-<p><i><%= friendly_date post.created_at %></i></p>
+<p><i><%= friendly_date post.created_at %> by: <%= post.author %></i></p>
 <p><%= post.body %></p>
 <p>
   <%= link_to 'Edit', edit_post_path(post) %>
